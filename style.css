@@ -397,7 +397,7 @@ form {
     text-align: center;
 }
 
-input {
+.form-wrapper input {
     font-family: Inter, sans-serif;
     font-size: 16px;
     color: #ABABFF;
@@ -518,71 +518,171 @@ input[type="submit"]:hover {
     opacity: 0.8;
 }
 
+.sign-up-form {
+    display: none;
+    opacity: 0;
+    justify-content: center;
+}
+
+.sign-up-form-wrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin-top: 80px;
+}
+
+label {
+    font-size: 14px;
+    color: #ffffff;
+    font-family: Inter, sans-serif;
+    font-weight: 500;
+    margin: 16px 0 6px 0;
+}
+
+.sign-up {
+    background-color: #5D5DFF;
+    font-family: Inter, sans-serif;
+    color: #C5D2DC;
+    border: none;
+    height: 48px;
+    font-size: 16px;
+    border-radius: 2px;
+}
+
+.sign-up:hover {
+    cursor: pointer;
+    background-color: #5151db;
+}
+
+.sign-up-form-wrapper input {
+    background-color: #151719;
+    height: 48px;
+    border: 1.5px solid #33363A;
+    border-radius: 10px;
+}
+
+.sign-up-form-wrapper input::placeholder {
+    padding-left: 8px;
+    color: #707D86;
+}
+
+.subtext {
+    margin-top: 24px;
+    text-align: center;
+}
+
+.form-text-1 {
+    font-size: 16px;
+    display: inline;
+    margin: 24px 5px;
+    text-align: center;
+    color: #9BA9B4;
+    line-height: 25px;
+    background-color: #151719;
+    position: relative;
+    z-index: -1;
+}
+
+.form-text-1::before {
+    content: '';
+    display: block;
+    height: 1px;
+    background-color: #33363A;
+    width: 23%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: -2;
+}
+
+.form-text-1::after {
+    content: '';
+    display: block;
+    height: 1px;
+    background-color: #33363A;
+    width: 23%;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    z-index: -2;
+}
+
+.form-text-1 span {
+    background-color: #151719;
+    z-index: 1;
+    padding: 0 5px;
+}
+
+.form-text-2 {
+    font-size: 14px;
+    display: inline;
+    margin: 24px 5px;
+    text-align: center;
+    color: #707D86;
+    line-height: 25px;
+}
+
+.sign-up-form a {
+    display: inline;
+    font-size: 16px;
+    color: #9BA9B4;
+}
+
+.sign-up-form-wrapper p a:hover {
+    text-decoration: none;
+}
+
+.subtext p {
+    display: inline;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.subtext a {
+    text-decoration: none;
+    color: #5D5DFF;
+    font-family: Inter, sans-serif;
+    font-weight: 400;
+    letter-spacing: -0.25px;
+}
+
+.subtext a:hover {
+    text-decoration: underline;
+}
+
+.sign-up-form input {
+    font-family: Inter, sans-serif;
+    font-size: 16px;
+    color: #707D86;
+    letter-spacing: -0.25px;
+    font-weight: 400;
+    padding-left: 8px;
+}
+
+.sign-up-form input:focus {
+    outline: 1.5px solid #5D5DFF;
+}
+
+.btn-google {
+    color: rgb(255, 255, 255);
+    font-family: Inter, sans-serif;
+    height: 48px;
+    font-size: 16px;
+    letter-spacing: -0.25px;
+    font-weight: 400;
+    border: none;
+    border-radius: 3px;
+    background: url(Images/Path-2.png) no-repeat 4%, url(Images/Rectangle.png) no-repeat 12%, #151719;
+}
+
+.btn-google:hover {
+    background-color: #E53D3E;
+    cursor: pointer;
+}
+
 /* font */
 @font-face {
     font-family: Architects-Daughter;
     src: url(Fonts/ArchitectsDaughter-Regular.ttf);
 }
 
-
-/* media */
-@media (max-width:930px) {
-    .additional-info {
-        justify-content: center
-    }
-
-    .columns-wrapper {
-        margin-top: 50px;
-    }
-}
-
-@media (max-width:515px) {
-    .columns-wrapper {
-        width: inherit;
-        flex-direction: column;
-        margin-top: 0;
-    }
-
-    .column {
-        margin-top: 50px;
-    }
-}
-
-@media (max-width:390px) {
-    input[type="email"] {
-        width: 245px;
-    }
-}
-
-@media (max-width:375px) {
-    nav .links a {
-        margin: auto 24px;
-    }
-}
-
-@media (max-width:335px) {
-    nav .links a {
-        margin: auto 12px;
-    }
-
-    input[type="email"] {
-        width: 200px;
-    }
-}
-
-@media (max-width:290px) {
-    input[type="email"] {
-        width: 180px;
-    }
-
-    nav .links {
-        display: flex;
-        align-content: center;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-
-    nav .links a {
-        margin: 0 0 25px 0;
-    }
-}
